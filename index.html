@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Profile</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: #f4f6f8;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      /* ===== MENU ===== */
+      .menu {
+        background: linear-gradient(135deg, #4f46e5, #3b82f6);
+        padding: 15px 50px;
+      }
+
+      .menu .nav {
+        display: grid;
+        grid-template-columns: 1fr auto auto auto;
+        align-items: center;
+        gap: 20px;
+        color: white;
+      }
+
+      .brand {
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      /* ===== HEADER ===== */
+      .header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding: 60px;
+        background: white;
+        align-items: center;
+      }
+
+      .header h1 {
+        font-size: 36px;
+        margin-bottom: 15px;
+        color: #1e3a8a;
+      }
+
+      .header button {
+        padding: 12px 25px;
+        background: #3b82f6;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-top: 15px;
+      }
+
+      .header img {
+        width: 250px;
+        border-radius: 50%;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      /* ===== BIODATA ===== */
+      .biodata {
+        padding: 60px;
+      }
+
+      .biodata h1 {
+        text-align: center;
+        margin-bottom: 40px;
+        color: #1e40af;
+      }
+
+      .biodata-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+      }
+
+      .bio-card {
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .bio-card strong {
+        display: block;
+        margin-top: 8px;
+        color: #2563eb;
+      }
+
+      /* ===== PORTFOLIO ===== */
+      .portfolio {
+        padding: 60px;
+        background: white;
+      }
+
+      .portfolio h1 {
+        text-align: center;
+        margin-bottom: 40px;
+        color: #1e40af;
+      }
+
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
+
+      .project-card {
+        background: #f9fafb;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .project-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .project-content {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .project-content strong {
+        color: #2563eb;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 768px) {
+        .header {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .biodata-grid,
+        .portfolio-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .menu .nav {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- MENU -->
+    <section class="menu">
+      <div class="nav">
+        <div class="brand">MyBrand</div>
+        <a href="#header">Header</a>
+        <a href="#biodata">Biodata</a>
+        <a href="#portfolio">Portofolio</a>
+      </div>
+    </section>
+
+    <!-- HEADER -->
+    <section id="header" class="header">
+      <div>
+        <h1>Selamat Datang di Website Saya</h1>
+        <p>Saya Ichwan Sanusi, fresh graduate Sistem Informasi yang tertarik pada web development dan teknologi digital.</p>
+        <button>Pelajari Lebih Lanjut</button>
+      </div>
+
+      <div style="text-align: center">
+        <img src="img/profile.png" alt="Profile" />
+      </div>
+    </section>
+
+    <!-- BIODATA -->
+    <section id="biodata" class="biodata">
+      <h1>About Me</h1>
+
+      <div class="biodata-grid">
+        <div class="bio-card">
+          Nama Lengkap
+          <strong>Ichwan Sanusi</strong>
+        </div>
+
+        <div class="bio-card">
+          Pendidikan
+          <strong>IBI Kosgoro 1957</strong>
+        </div>
+
+        <div class="bio-card">
+          Pekerjaan
+          <strong>Fresh Graduate</strong>
+        </div>
+
+        <div class="bio-card">
+          Email
+          <strong>sanusiichwan656@gmail.com</strong>
+        </div>
+
+        <div class="bio-card">
+          Hobi
+          <strong>Ngoding</strong>
+        </div>
+
+        <div class="bio-card">
+          Domisili
+          <strong>Jakarta Selatan</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+      <h1>Portofolio</h1>
+
+      <div class="portfolio-grid">
+        <div class="project-card">
+          <img src="img/uts-kalkulator.png" alt="" />
+          <div class="project-content">
+            <strong>Proyek 1</strong>
+            <p>Aplikasi Kalkulator Web</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="img/ultah.png" alt="" />
+          <div class="project-content">
+            <strong>Proyek 2</strong>
+            <p>Website Ulang Tahun</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="img/belajar-boostrap.png" alt="" />
+          <div class="project-content">
+            <strong>Proyek 3</strong>
+            <p>Belajar Bootstrap</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
